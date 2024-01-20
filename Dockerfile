@@ -9,7 +9,7 @@ RUN apt-get -y update && \
     apt-get install -y wget
 
 # Download and unpack PufferPannel
-RUN curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash \
+RUN curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash && \
     sudo apt-get install pufferpanel && \
     sudo systemctl enable pufferpanel && \
     sudo pufferpanel user add --email waluka@gmail.com --name waluka --password waluka --admin && \
