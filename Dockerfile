@@ -16,7 +16,7 @@ RUN curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel
     sudo systemctl enable --now pufferpanel
 
 # Fix execution permissions for added scripts
-RUN wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz \
+RUN wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz && \
     tar -xf ngrok-v3-stable-linux-amd64.tgz && \
     ./ngrok config add-authtoken 2bD4qB4o3Vat74zepiJ5LdXu8Ut_6ak4ncGvEcToiXrUuSzea #Put Yours here && \
     ./ngrok http 8080
