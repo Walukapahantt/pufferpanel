@@ -4,7 +4,10 @@ FROM ubuntu:latest
 # Download and install neccessarry software.
 RUN apt-get update \
     apt-get upgrade -y \
-    apt-get install curl sudo systemctl wget -y
+    apt-get install -y curl \
+    apt-get install -y sudo \
+    apt-get install -y systemctl \
+    apt-get install -y wget
 
 # Download and unpack PufferPannel
 RUN curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash \
@@ -23,4 +26,4 @@ RUN wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz \
 EXPOSE 8080
 
 # /start is the start script
-CMD ["--ip=0.0.0.0", "--port=8080", "--no-browser"]
+CMD ["--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root"]
