@@ -23,6 +23,3 @@ RUN wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz &&
 
 # 8080 for WebServer
 EXPOSE 8080
-
-# /start is the start script
-CMD ["--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root"]
