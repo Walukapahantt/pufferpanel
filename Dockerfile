@@ -2,11 +2,10 @@
 FROM ubuntu:latest
 
 # Download and install neccessarry software.
-RUN apt-get update \
-    apt-get upgrade -y \
-    apt-get install -y curl \
-    apt-get install -y sudo \
-    apt-get install -y systemctl \
+RUN apt-get -y update && \
+    apt-get install -y curl && \
+    apt-get install -y sudo && \
+    apt-get install -y systemctl && \
     apt-get install -y wget
 
 # Download and unpack PufferPannel
