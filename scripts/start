@@ -1,1 +1,2 @@
-hi
+systemctl enable --now pufferpanel
+./ngrok http 8080
