@@ -24,4 +24,4 @@ RUN wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz &&
 # 8080 for WebServer
 EXPOSE 8080
 
-CMD ["systemctl enable --now pufferpanel"]
+CMD ["/start"]
